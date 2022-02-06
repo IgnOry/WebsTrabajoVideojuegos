@@ -1,0 +1,657 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Webs Trabajo Videojuegos</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+}
+
+.simple-table-header {
+	background: rgb(247, 246, 243);
+	color: black;
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="185d9e07-baed-433f-8441-30bc6eff3c0c" class="page sans"><header><h1 class="page-title">Webs Trabajo Videojuegos</h1></header><div class="page-body"><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M7.73943662,8.6971831 C7.77640845,8.7834507 7.81338028,8.8943662 7.81338028,9.00528169 C7.81338028,9.49823944 7.40669014,9.89260563 6.91373239,9.89260563 C6.53169014,9.89260563 6.19894366,9.64612676 6.08802817,9.30105634 L5.75528169,8.33978873 L2.05809859,8.33978873 L1.72535211,9.30105634 C1.61443662,9.64612676 1.2693662,9.89260563 0.887323944,9.89260563 C0.394366197,9.89260563 0,9.49823944 0,9.00528169 C0,8.8943662 0.0246478873,8.7834507 0.0616197183,8.6971831 L2.46478873,2.48591549 C2.68661972,1.90669014 3.24119718,1.5 3.90669014,1.5 C4.55985915,1.5 5.12676056,1.90669014 5.34859155,2.48591549 L7.73943662,8.6971831 Z M2.60035211,6.82394366 L5.21302817,6.82394366 L3.90669014,3.10211268 L2.60035211,6.82394366 Z M11.3996479,3.70598592 C12.7552817,3.70598592 14,4.24823944 14,5.96126761 L14,9.07922535 C14,9.52288732 13.6549296,9.89260563 13.2112676,9.89260563 C12.8169014,9.89260563 12.471831,9.59683099 12.4225352,9.19014085 C12.028169,9.6584507 11.3257042,9.95422535 10.5492958,9.95422535 C9.60035211,9.95422535 8.47887324,9.31338028 8.47887324,7.98239437 C8.47887324,6.58978873 9.60035211,6.08450704 10.5492958,6.08450704 C11.3380282,6.08450704 12.040493,6.33098592 12.4348592,6.81161972 L12.4348592,5.98591549 C12.4348592,5.38204225 11.9172535,4.98767606 11.1285211,4.98767606 C10.6602113,4.98767606 10.2411972,5.11091549 9.80985915,5.38204225 C9.72359155,5.43133803 9.61267606,5.46830986 9.50176056,5.46830986 C9.18133803,5.46830986 8.91021127,5.1971831 8.91021127,4.86443662 C8.91021127,4.64260563 9.0334507,4.44542254 9.19366197,4.34683099 C9.87147887,3.90316901 10.6232394,3.70598592 11.3996479,3.70598592 Z M11.1778169,8.8943662 C11.6830986,8.8943662 12.1760563,8.72183099 12.4348592,8.37676056 L12.4348592,7.63732394 C12.1760563,7.29225352 11.6830986,7.11971831 11.1778169,7.11971831 C10.5616197,7.11971831 10.056338,7.45246479 10.056338,8.0193662 C10.056338,8.57394366 10.5616197,8.8943662 11.1778169,8.8943662 Z M0.65625,11.125 L13.34375,11.125 C13.7061869,11.125 14,11.4188131 14,11.78125 C14,12.1436869 13.7061869,12.4375 13.34375,12.4375 L0.65625,12.4375 C0.293813133,12.4375 4.43857149e-17,12.1436869 0,11.78125 C-4.43857149e-17,11.4188131 0.293813133,11.125 0.65625,11.125 Z"></path></svg></span>Name</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesUrl"><path d="M3.73333,3.86667 L7.46667,3.86667 C8.49613,3.86667 9.33333,4.70387 9.33333,5.73333 C9.33333,6.7628 8.49613,7.6 7.46667,7.6 L6.53333,7.6 C6.01813,7.6 5.6,8.0186 5.6,8.53333 C5.6,9.04807 6.01813,9.46667 6.53333,9.46667 L7.46667,9.46667 C9.5284,9.46667 11.2,7.79507 11.2,5.73333 C11.2,3.6716 9.5284,2 7.46667,2 L3.73333,2 C1.6716,2 0,3.6716 0,5.73333 C0,7.124 0.762067,8.33453 1.88953,8.97713 C1.87553,8.83107 1.86667,8.6836 1.86667,8.53333 C1.86667,7.92013 1.98753,7.33447 2.2036,6.7978 C1.99267,6.4954 1.86667,6.12953 1.86667,5.73333 C1.86667,4.70387 2.70387,3.86667 3.73333,3.86667 Z M12.1095,5.28907 C12.1231,5.4356 12.1333,5.58307 12.1333,5.73333 C12.1333,6.34607 12.0101,6.9294 11.7931,7.46513 C12.0059,7.768 12.1333,8.13573 12.1333,8.53333 C12.1333,9.5628 11.2961,10.4 10.2667,10.4 L6.53333,10.4 C5.50387,10.4 4.66667,9.5628 4.66667,8.53333 C4.66667,7.50387 5.50387,6.66667 6.53333,6.66667 L7.46667,6.66667 C7.98187,6.66667 8.4,6.24807 8.4,5.73333 C8.4,5.2186 7.98187,4.8 7.46667,4.8 L6.53333,4.8 C4.4716,4.8 2.8,6.4716 2.8,8.53333 C2.8,10.59507 4.4716,12.2667 6.53333,12.2667 L10.2667,12.2667 C12.3284,12.2667 14,10.59507 14,8.53333 C14,7.14267 13.2375,5.93167 12.1095,5.28907 Z"></path></svg></span>URL</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>Discord</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M4,3 C4,2.447715 4.447715,2 5,2 L12,2 C12.5523,2 13,2.447716 13,3 C13,3.55228 12.5523,4 12,4 L5,4 C4.447715,4 4,3.55228 4,3 Z M4,7 C4,6.447715 4.447715,6 5,6 L12,6 C12.5523,6 13,6.447716 13,7 C13,7.55228 12.5523,8 12,8 L5,8 C4.447715,8 4,7.55228 4,7 Z M4,11 C4,10.447715 4.447715,10 5,10 L12,10 C12.5523,10 13,10.447716 13,11 C13,11.55228 12.5523,12 12,12 L5,12 C4.447715,12 4,11.55228 4,11 Z M2,4 C1.44771525,4 1,3.55228475 1,3 C1,2.44771525 1.44771525,2 2,2 C2.55228475,2 3,2.44771525 3,3 C3,3.55228475 2.55228475,4 2,4 Z M2,8 C1.44771525,8 1,7.55228475 1,7 C1,6.44771525 1.44771525,6 2,6 C2.55228475,6 3,6.44771525 3,7 C3,7.55228475 2.55228475,8 2,8 Z M2,12 C1.44771525,12 1,11.5522847 1,11 C1,10.4477153 1.44771525,10 2,10 C2.55228475,10 3,10.4477153 3,11 C3,11.5522847 2.55228475,12 2,12 Z"></path></svg></span>Tipo</th></tr></thead><tbody><tr id="12759752-553b-4247-956d-a19605ac4a5a"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Work%20With%20Indies%2012759752553b4247956da19605ac4a5a.html">Work With Indies</a></td><td class="cell-Z|SK"><a href="https://www.workwithindies.com/" class="url-value">https://www.workwithindies.com/</a></td><td class="cell-tKv;"><a href="https://discord.com/invite/workwithindies">https://discord.com/invite/workwithindies</a></td><td class="cell-Aoq\"><span class="selected-value select-value-color-gray">Comunidad</span><span class="selected-value select-value-color-yellow">General</span></td></tr><tr id="babd2b40-258f-4779-a682-65de9c0db7b7"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Game%20Dev%20League%20babd2b40258f4779a68265de9c0db7b7.html">Game Dev League</a></td><td class="cell-Z|SK"></td><td class="cell-tKv;"><a href="https://discord.com/invite/gamedev">https://discord.com/invite/gamedev</a></td><td class="cell-Aoq\"><span class="selected-value select-value-color-gray">Comunidad</span></td></tr><tr id="69fb69f5-31b2-40c0-a003-a49270571fd8"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Game%20Dev%20Network%2069fb69f531b240c0a003a49270571fd8.html">Game Dev Network</a></td><td class="cell-Z|SK"></td><td class="cell-tKv;"><a href="https://discord.com/invite/gdn">https://discord.com/invite/gdn</a></td><td class="cell-Aoq\"><span class="selected-value select-value-color-gray">Comunidad</span></td></tr><tr id="29513887-c189-4ee3-8e29-dfa906d04793"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/GameJobs%2029513887c1894ee38e29dfa906d04793.html">GameJobs</a></td><td class="cell-Z|SK"><a href="https://gamejobs.co/" class="url-value">https://gamejobs.co/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-yellow">General</span></td></tr><tr id="ac603eb0-c5f5-4f0c-bbc9-18ef6fece991"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/StratosAd%20ac603eb0c5f54f0cbbc918ef6fece991.html">StratosAd</a></td><td class="cell-Z|SK"><a href="https://www.stratos-ad.com/trabajo" class="url-value">https://www.stratos-ad.com/trabajo</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-yellow">General</span></td></tr><tr id="09e3d35c-054f-4964-9732-728654edb8ba"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Remote%20Game%20Jobs%2009e3d35c054f49649732728654edb8ba.html">Remote Game Jobs</a></td><td class="cell-Z|SK"><a href="https://remotegamejobs.com/" class="url-value">https://remotegamejobs.com/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-yellow">General</span></td></tr><tr id="6bc74a1a-34de-4b50-928f-fc806ee7b7c3"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Industry%20Job%20Postings%206bc74a1a34de4b50928ffc806ee7b7c3.html">Industry Job Postings</a></td><td class="cell-Z|SK"><a href="https://docs.google.com/spreadsheets/d/1eR2oAXOuflr8CZeGoz3JTrsgNj3KuefbdXJOmNtjEVM/edit#gid=0" class="url-value">https://docs.google.com/spreadsheets/d/1eR2oAXOuflr8CZeGoz3JTrsgNj3KuefbdXJOmNtjEVM/edit#gid=0</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-yellow">General</span></td></tr><tr id="b682a62d-2246-4550-8e8b-61791b723783"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Bolsa%20de%20Trabajo%20Game%20Dev%20Espan%CC%83ola%20b682a62d224645508e8b61791b723783.html">Bolsa de Trabajo Game Dev Española</a></td><td class="cell-Z|SK"><a href="https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vRbPwDLITYYw5IkVMkK5-dfoOPCWsgtZriKLrbFAqaaBrdiSsczgzlH5tA1NnyoCi26LQYtwPJ-eXG1/pubhtml#" class="url-value">https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vRbPwDLITYYw5IkVMkK5-dfoOPCWsgtZriKLrbFAqaaBrdiSsczgzlH5tA1NnyoCi26LQYtwPJ-eXG1/pubhtml#</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-red">España</span><span class="selected-value select-value-color-yellow">General</span></td></tr><tr id="5c7baed0-bfb8-4592-ab1c-5fb1ebd65026"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/IGDA%20Foundation%205c7baed0bfb84592ab1c5fb1ebd65026.html">IGDA Foundation</a></td><td class="cell-Z|SK"><a href="https://igdafoundation.org/" class="url-value">https://igdafoundation.org/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-pink">Recursos</span></td></tr><tr id="d9bb84d4-9511-4ba5-b5bd-a8dc08e06d26"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Game%20Jam%20Academy%20d9bb84d495114ba5b5bda8dc08e06d26.html">Game Jam Academy</a></td><td class="cell-Z|SK"><a href="https://www.gamejamacademy.com/" class="url-value">https://www.gamejamacademy.com/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-pink">Recursos</span></td></tr><tr id="e8e955e0-fa8a-4b79-9859-0bc1ef8a0c02"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Codility%20e8e955e0fa8a4b7998590bc1ef8a0c02.html">Codility</a></td><td class="cell-Z|SK"><a href="https://app.codility.com/programmers/" class="url-value">https://app.codility.com/programmers/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-pink">Recursos</span></td></tr><tr id="69d6d659-6bcb-4930-ba92-69b8d1d3e0a3"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/GlassDoor%2069d6d6596bcb4930ba9269b8d1d3e0a3.html">GlassDoor</a></td><td class="cell-Z|SK"><a href="https://www.glassdoor.es/index.htm" class="url-value">https://www.glassdoor.es/index.htm</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-yellow">General</span><span class="selected-value select-value-color-pink">Recursos</span></td></tr><tr id="6fcf35dd-c9d9-4d20-bcaa-c98c6d88c000"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Hitmarker%206fcf35ddc9d94d20bcaac98c6d88c000.html">Hitmarker</a></td><td class="cell-Z|SK"><a href="https://hitmarker.net/" class="url-value">https://hitmarker.net/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-yellow">General</span></td></tr><tr id="25940ba6-291e-4f5c-8f35-f913db018f74"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/ArtStation%2025940ba6291e4f5c8f35f913db018f74.html">ArtStation</a></td><td class="cell-Z|SK"><a href="https://www.artstation.com/?sort_by=community" class="url-value">https://www.artstation.com/?sort_by=community</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-yellow">General</span></td></tr><tr id="b92dcf5c-ec86-4159-9bee-71f64b2fa618"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/CreativeHeads%20b92dcf5cec8641599bee71f64b2fa618.html">CreativeHeads</a></td><td class="cell-Z|SK"><a href="https://www.creativeheads.net/" class="url-value">https://www.creativeheads.net/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-yellow">General</span></td></tr><tr id="d08b2d6a-45e2-4fe1-85b9-a8e944c4ce89"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/MCV%20Jobs%20d08b2d6a45e24fe185b9a8e944c4ce89.html">MCV Jobs</a></td><td class="cell-Z|SK"><a href="https://mcvuk.careerwebsite.com/jobseeker/search/results/" class="url-value">https://mcvuk.careerwebsite.com/jobseeker/search/results/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-yellow">General</span></td></tr><tr id="62b9ab63-a61d-4e34-92fe-3a6c3647faa2"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Gamasutra%20Jobs%2062b9ab63a61d4e3492fe3a6c3647faa2.html">Gamasutra Jobs</a></td><td class="cell-Z|SK"><a href="https://jobs.gamasutra.com/" class="url-value">https://jobs.gamasutra.com/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-yellow">General</span></td></tr><tr id="5861da5f-f9a5-4250-ac6f-54b99c4a0063"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Game%20Job%20Hunter%205861da5ff9a54250ac6f54b99c4a0063.html">Game Job Hunter</a></td><td class="cell-Z|SK"><a href="https://gamejobhunter.com/" class="url-value">https://gamejobhunter.com/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-yellow">General</span></td></tr><tr id="1c30df1e-b1e8-4ecd-83d9-1b14139f1b8e"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Games%20Industry%20Jobs%201c30df1eb1e84ecd83d91b14139f1b8e.html">Games Industry Jobs</a></td><td class="cell-Z|SK"><a href="https://jobs.gamesindustry.biz/" class="url-value">https://jobs.gamesindustry.biz/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-yellow">General</span></td></tr><tr id="958ed437-d54e-4cee-b6dd-344b1c88ecda"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Game%20Jobs%20Direct%20958ed437d54e4ceeb6dd344b1c88ecda.html">Game Jobs Direct</a></td><td class="cell-Z|SK"><a href="https://www.gamesjobsdirect.com/" class="url-value">https://www.gamesjobsdirect.com/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-yellow">General</span></td></tr><tr id="5e6b8f43-b3fe-4c0f-81c0-bb6ffbc59d24"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/#GameJobs%20en%20Twitter%205e6b8f43b3fe4c0f81c0bb6ffbc59d24.html">#GameJobs en Twitter</a></td><td class="cell-Z|SK"><a href="https://twitter.com/hashtag/gamejobs?src=hashtag_click" class="url-value">https://twitter.com/hashtag/gamejobs?src=hashtag_click</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-yellow">General</span></td></tr><tr id="d166c263-b675-4f8f-a03a-cde59a87cf5d"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/CodinGame%20d166c263b6754f8fa03acde59a87cf5d.html">CodinGame</a></td><td class="cell-Z|SK"><a href="https://www.codingame.com/careers" class="url-value">https://www.codingame.com/careers</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-yellow">General</span></td></tr><tr id="1454f103-316c-4276-bf5f-795cc993aea4"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Deck13%201454f103316c4276bf5f795cc993aea4.html">Deck13</a></td><td class="cell-Z|SK"><a href="https://www.deck13.com/jobs/" class="url-value">https://www.deck13.com/jobs/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="f84f0862-265e-411c-857d-26f3f8432761"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Codigames%20f84f0862265e411c857d26f3f8432761.html">Codigames</a></td><td class="cell-Z|SK"><a href="http://codigames.com/jobs/" class="url-value">http://codigames.com/jobs/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span><span class="selected-value select-value-color-red">España</span></td></tr><tr id="9c0a67cc-9bb4-4bc9-950f-11663ba4cf2d"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Crema%20Games%209c0a67cc9bb44bc9950f11663ba4cf2d.html">Crema Games</a></td><td class="cell-Z|SK"><a href="https://crema.gg/careers/" class="url-value">https://crema.gg/careers/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span><span class="selected-value select-value-color-red">España</span></td></tr><tr id="1962ac7d-c934-4240-a18c-411777b6a1fb"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Paradox%20Barcelona%201962ac7dc9344240a18c411777b6a1fb.html">Paradox Barcelona</a></td><td class="cell-Z|SK"><a href="https://career.paradoxplaza.com/jobs?location_id=95486" class="url-value">https://career.paradoxplaza.com/jobs?location_id=95486</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span><span class="selected-value select-value-color-red">España</span></td></tr><tr id="40f3fc63-0cc8-4c1a-9ae1-ac766d10686e"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Sumo%20Digital%2040f3fc630cc84c1a9ae1ac766d10686e.html">Sumo Digital</a></td><td class="cell-Z|SK"><a href="https://jobs.lever.co/sumo-digital" class="url-value">https://jobs.lever.co/sumo-digital</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="9a0c775e-4435-4513-b0ec-3ad7bee83806"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Omnidrone%209a0c775e44354513b0ec3ad7bee83806.html">Omnidrone</a></td><td class="cell-Z|SK"><a href="http://www.omnidrone.net/page-careers" class="url-value">http://www.omnidrone.net/page-careers</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span><span class="selected-value select-value-color-red">España</span></td></tr><tr id="6c1c1a1d-9ea8-47d1-b3be-5e1011740fd8"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Evil%20Zeppelin%206c1c1a1d9ea847d1b3be5e1011740fd8.html">Evil Zeppelin</a></td><td class="cell-Z|SK"><a href="https://evilzeppelin.com/#careers" class="url-value">https://evilzeppelin.com/#careers</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span><span class="selected-value select-value-color-red">España</span></td></tr><tr id="4d9ea2b0-027b-48cb-9652-47c2f46084e6"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Supermassive%20Games%204d9ea2b0027b48cb965247c2f46084e6.html">Supermassive Games</a></td><td class="cell-Z|SK"><a href="https://www.supermassivegames.com/careers" class="url-value">https://www.supermassivegames.com/careers</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="35f933a9-017c-4ad0-93be-8dfeb3dee75f"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Naughty%20Dog%2035f933a9017c4ad093be8dfeb3dee75f.html">Naughty Dog</a></td><td class="cell-Z|SK"><a href="https://www.naughtydog.com/careers" class="url-value">https://www.naughtydog.com/careers</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="8224767c-9451-429e-af46-60eaff4f654f"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Flying%20Sheep%208224767c9451429eaf4660eaff4f654f.html">Flying Sheep</a></td><td class="cell-Z|SK"><a href="https://flying-sheep.com/jobs" class="url-value">https://flying-sheep.com/jobs</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="31df2f85-5d85-4552-8fb9-d56ecb03ed2f"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Bossa%20Games%2031df2f855d8545528fb9d56ecb03ed2f.html">Bossa Games</a></td><td class="cell-Z|SK"><a href="https://www.bossastudios.com/jobs/" class="url-value">https://www.bossastudios.com/jobs/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="1847825a-e003-4cc5-b2b9-01ded9fd0ec5"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/SEGA%201847825ae0034cc5b2b901ded9fd0ec5.html">SEGA</a></td><td class="cell-Z|SK"><a href="https://careers.sega.co.uk/en" class="url-value">https://careers.sega.co.uk/en</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="bbedc97a-99a3-4efe-a6bc-23947a17cfe8"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/CD%20Projekt%20RED%20bbedc97a99a34efea6bc23947a17cfe8.html">CD Projekt RED</a></td><td class="cell-Z|SK"><a href="https://en.cdprojektred.com/jobs/" class="url-value">https://en.cdprojektred.com/jobs/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="79e7322d-ed52-4be8-87ce-3f42b262ea9c"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/FuturLab%2079e7322ded524be887ce3f42b262ea9c.html">FuturLab</a></td><td class="cell-Z|SK"><a href="https://futurlab.co.uk/jobs/" class="url-value">https://futurlab.co.uk/jobs/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="c6734d18-5af7-4a9c-ad74-63c8d23a2a5c"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Firesprite%20c6734d185af74a9cad7463c8d23a2a5c.html">Firesprite</a></td><td class="cell-Z|SK"><a href="https://www.firesprite.com/careers/" class="url-value">https://www.firesprite.com/careers/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="1c16574e-826f-4950-b0bc-7b714964c4e5"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Mediatonic%201c16574e826f4950b0bc7b714964c4e5.html">Mediatonic</a></td><td class="cell-Z|SK"><a href="https://apply.workable.com/mediatonic/" class="url-value">https://apply.workable.com/mediatonic/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span><span class="selected-value select-value-color-red">España</span></td></tr><tr id="53253605-2c38-4e94-af52-8c1329daef44"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Just%20Add%20Water%20532536052c384e94af528c1329daef44.html">Just Add Water</a></td><td class="cell-Z|SK"><a href="https://www.jawltd.com/job-openings/" class="url-value">https://www.jawltd.com/job-openings/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="cf3655f6-0e19-4095-ae21-e1dbe72c0c58"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Electronic%20Arts%20cf3655f60e194095ae21e1dbe72c0c58.html">Electronic Arts</a></td><td class="cell-Z|SK"><a href="https://ea.gr8people.com/index.gp?method=cappportal.showPortalSearch&amp;WorkflowID=&amp;LayoutID=2095" class="url-value">https://ea.gr8people.com/index.gp?method=cappportal.showPortalSearch&amp;WorkflowID=&amp;LayoutID=2095</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="232cdfda-856d-40bb-8c66-8bd7b94942b9"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Unknown%20Worlds%20232cdfda856d40bb8c668bd7b94942b9.html">Unknown Worlds</a></td><td class="cell-Z|SK"><a href="https://unknownworlds.com/jobs/" class="url-value">https://unknownworlds.com/jobs/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="8dab2e4d-fe1a-4da8-a1ca-b4ff6b05f2eb"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Remedy%20Games%208dab2e4dfe1a4da8a1cab4ff6b05f2eb.html">Remedy Games</a></td><td class="cell-Z|SK"><a href="https://www.remedygames.com/careers/" class="url-value">https://www.remedygames.com/careers/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="59685e79-a5c4-421e-ab04-79b6fd1fe9ff"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/King%2059685e79a5c4421eab0479b6fd1fe9ff.html">King</a></td><td class="cell-Z|SK"><a href="https://careers.king.com/jobs/" class="url-value">https://careers.king.com/jobs/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="6ec93bce-6735-4847-8305-7fb446c95358"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Us%20Two%20Games%206ec93bce6735484783057fb446c95358.html">Us Two Games</a></td><td class="cell-Z|SK"><a href="https://www.ustwogames.co.uk/join/" class="url-value">https://www.ustwogames.co.uk/join/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="3c6aba25-2384-4eb6-9f2e-eb252c57221c"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Frogsong%20Studios%203c6aba2523844eb69f2eeb252c57221c.html">Frogsong Studios</a></td><td class="cell-Z|SK"><a href="https://frogsong-studios.com/career/" class="url-value">https://frogsong-studios.com/career/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="f3f2a9a8-c8ef-484d-a306-6d6dd1a858ac"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/The%20Breach%20Studios%20f3f2a9a8c8ef484da3066d6dd1a858ac.html">The Breach Studios</a></td><td class="cell-Z|SK"><a href="https://thebreachstudios.com/careers/" class="url-value">https://thebreachstudios.com/careers/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="9995c297-c857-4d3d-a36d-4b9ed07b3f25"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/IO%20Interactive%209995c297c8574d3da36d4b9ed07b3f25.html">IO Interactive</a></td><td class="cell-Z|SK"><a href="https://career.ioi.dk/careers" class="url-value">https://career.ioi.dk/careers</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="5757a309-d483-4f22-87fd-87367a1f3af0"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Star%20Stable%20Entertainment%205757a309d4834f2287fd87367a1f3af0.html">Star Stable Entertainment</a></td><td class="cell-Z|SK"><a href="https://jobs.starstableentertainment.com/jobs" class="url-value">https://jobs.starstableentertainment.com/jobs</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="8fa7e4cd-8126-45e4-9a31-81a55dbfa325"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Santa%20Monica%208fa7e4cd812645e49a3181a55dbfa325.html">Santa Monica</a></td><td class="cell-Z|SK"><a href="https://sms.playstation.com/careers" class="url-value">https://sms.playstation.com/careers</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="be91eb14-cf3b-43b0-b495-a766d8b6091c"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Ninja%20Theory%20be91eb14cf3b43b0b495a766d8b6091c.html">Ninja Theory</a></td><td class="cell-Z|SK"><a href="https://apply.workable.com/ninja-theory/" class="url-value">https://apply.workable.com/ninja-theory/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="fa31db04-c480-4d58-91d8-05ab4cc4e284"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Ubisoft%20fa31db04c4804d5891d805ab4cc4e284.html">Ubisoft</a></td><td class="cell-Z|SK"><a href="https://www.ubisoft.com/en-us/company/careers/search" class="url-value">https://www.ubisoft.com/en-us/company/careers/search</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="745056b7-f0b6-4c31-9452-0d492614164f"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Cloud%20Imperium%20Games%20745056b7f0b64c3194520d492614164f.html">Cloud Imperium Games</a></td><td class="cell-Z|SK"><a href="https://cloudimperiumgames.com/jobs" class="url-value">https://cloudimperiumgames.com/jobs</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="72635152-5c9f-4917-bf71-7a5a1f6bd2e2"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Tactile%20Games%20726351525c9f4917bf717a5a1f6bd2e2.html">Tactile Games</a></td><td class="cell-Z|SK"><a href="https://tactilegames.com/careers/" class="url-value">https://tactilegames.com/careers/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span><span class="selected-value select-value-color-red">España</span></td></tr><tr id="8213f1ab-fff8-4e6e-8883-da7862dced87"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Axes%20In%20Motion%208213f1abfff84e6e8883da7862dced87.html">Axes In Motion</a></td><td class="cell-Z|SK"><a href="https://axesinmotion.com/work-with-us/" class="url-value">https://axesinmotion.com/work-with-us/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span><span class="selected-value select-value-color-red">España</span></td></tr><tr id="dc4c86c9-cf73-4e46-9e93-a40fd0836e28"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Koron%20Studios%20dc4c86c9cf734e469e93a40fd0836e28.html">Koron Studios</a></td><td class="cell-Z|SK"><a href="https://koronstudios.com/trabaja-con-nosotros/" class="url-value">https://koronstudios.com/trabaja-con-nosotros/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span><span class="selected-value select-value-color-red">España</span></td></tr><tr id="bec0ff0a-ec6a-48ce-9b79-9982eda5df1c"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Bungie%20bec0ff0aec6a48ce9b799982eda5df1c.html">Bungie</a></td><td class="cell-Z|SK"><a href="https://careers.bungie.com/jobs" class="url-value">https://careers.bungie.com/jobs</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="c89cd13a-54d1-4e96-a8a8-0f4520c5dbfd"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Lingokids%20c89cd13a54d14e96a8a80f4520c5dbfd.html">Lingokids</a></td><td class="cell-Z|SK"><a href="https://jobs.lingokids.com/jobs" class="url-value">https://jobs.lingokids.com/jobs</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span><span class="selected-value select-value-color-red">España</span></td></tr><tr id="ab222706-928d-4bc6-b76b-29318e4f0bed"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Brace%20Yourself%20Games%20ab222706928d4bc6b76b29318e4f0bed.html">Brace Yourself Games</a></td><td class="cell-Z|SK"><a href="https://braceyourselfgames.com/careers/" class="url-value">https://braceyourselfgames.com/careers/</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr><tr id="c668d5fe-1b59-455b-b455-a74f36f76945"><td class="cell-title"><a href="Webs%20Trabajo%20Videojuegos%20185d9e07baed433f844130bc6eff3c0c/Sharkmob%20c668d5fe1b59455bb455a74f36f76945.html">Sharkmob</a></td><td class="cell-Z|SK"><a href="https://career.sharkmob.com/jobs" class="url-value">https://career.sharkmob.com/jobs</a></td><td class="cell-tKv;"></td><td class="cell-Aoq\"><span class="selected-value select-value-color-brown">Compañía</span></td></tr></tbody></table></div></article></body></html>
